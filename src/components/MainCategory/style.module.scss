@@ -1,0 +1,20 @@
+.container {
+  h2 {
+    color: #5e4339;
+  }
+  margin-bottom: 75px;
+}
+
+.categories {
+  display: grid;
+  justify-content: stretch;
+  // grid-template-columns: repeat(4, 1fr);
+  // grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  // grid-template-columns: repeat( minmax(150px, 300px));
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+  width: 100%;
+  // align-items: center;
+  // justify-content: center;
+  gap: 15px;
+  /* margin-left: 8rem; */
+}

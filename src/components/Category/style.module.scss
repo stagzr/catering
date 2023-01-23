@@ -1,0 +1,48 @@
+.container {
+  // margin: auto;
+  // justify-self: stretch;
+  background-color: #fff;
+  border-radius: 30px;
+  height: 266px;
+  // max-width: 300px;
+  overflow: hidden;
+
+  .imageContainer {
+    height: 60%;
+    width: 100%;
+    overflow: hidden;
+    .image {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+    // &::after {
+    //   content: "->";
+    //   width: 100px;
+    //   color: red;
+    // }
+  }
+
+  .header {
+    position: relative;
+    height: 40%;
+    color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .arrow {
+      position: absolute;
+      width: 35px;
+      height: 35px;
+      top: 0;
+      right: 5%;
+      transform: translateY(-50%);
+      background-color: #fcece7;
+      color: #d00000;
+      padding: 1rem;
+      border-radius: 50%;
+      font-size: 2rem;
+    }
+  }
+}

@@ -1,0 +1,3 @@
+# Case ICA Frontend
+
+Din uppgift är att göra en copycat på den startsida som finns i bifogade screenshots (mobile.png, desktop.png & active-store-info.png). Du använder antingen React (create-react-app) eller Next.js. Bifogat finns en json-fil där all data för uppgiften, bortsett sidfoten som du kan hårdkoda, finns. Använd valfritt sätt att skriva CSS på och tänk på att sidan ska vara responsiv. Typsnittet i bilderna är ICAs egen men det går bra att bara använda Arial. Sidan behöver inte publiceras någonstans men resultatet, exklusive node_modules, zippas och skickas till lisa.andersson@ica.se
