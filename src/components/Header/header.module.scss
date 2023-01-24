@@ -1,0 +1,60 @@
+.header {
+  background-color: #fff;
+
+  .headerContainer {
+    max-width: var(--section-max-witdh);
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.navContainer {
+  background-color: var(--color-ica-pink);
+
+  nav {
+    color: red;
+    max-width: var(--section-max-witdh);
+    margin: auto;
+  }
+}
+
+.shopInfo {
+  position: relative;
+
+  button {
+    border: none;
+    background-color: red;
+    border-radius: 50%;
+  }
+
+  .extraInfo {
+    background-color: red;
+    &.closed {
+      display: none;
+    }
+    &.open {
+      display: block;
+    }
+  }
+}
+
+.button {
+  border: none;
+  border-radius: 30px;
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+}
+
+button.loginButton {
+  @extend .button;
+  background-color: var(--color-ica-pink);
+  color: var(--color-ica-red);
+}
+
+button.cartButton {
+  @extend .button;
+  background-color: var(--color-ica-red);
+  color: #fff;
+}

@@ -4,6 +4,9 @@ import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import json from "../../assignment/data.json";
 import MainCategory from "@/components/MainCategory/MainCategory";
+import Navbar from "@/components/Header/Header";
+import Header from "@/components/Header/Header";
+import About from "@/components/About/About";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,11 +20,15 @@ export async function getStaticProps() {
 
 export default function Home({ data }) {
   return (
-    <main className={styles.main}>
-      {data.content.mainCategories.map((mainCategory) => {
-        return <MainCategory data={mainCategory} />;
-      })}
-    </main>
+    <>
+      <Header data={data} />
+      <main className={styles.main}>
+        <About data={data} />
+        {data.content.mainCategories.map((mainCategory) => {
+          return <MainCategory data={mainCategory} />;
+        })}
+      </main>
+    </>
   );
 }
 

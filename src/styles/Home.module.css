@@ -1,4 +1,4 @@
 .main {
-  background-color: #f8f5f5;
-  max-width: 1264px;
+  max-width: var(--section-max-witdh);
+  margin: auto;
 }

@@ -1,0 +1,13 @@
+@use "constants";
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f8f5f5;
+  margin: 0;
+}
+
+:root {
+  --section-max-witdh: #{constants.$section-max-width};
+  --color-ica-pink: #fcece7;
+  --color-ica-red: #e63819;
+}

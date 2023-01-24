@@ -1,8 +1,4 @@
-import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "@next/font/google";
-import styles from "./style.module.scss";
-import json from "../../../assignment/data.json";
+import styles from "./mainCategory.module.scss";
 import Category from "../Category/Category";
 
 export default function MainCategory({ data }) {
