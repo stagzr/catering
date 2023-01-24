@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build  && next export",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "publish": "gh-pages -d out"
   },
   "dependencies": {
     "@next/font": "^13.1.2",
@@ -22,5 +23,8 @@
     "react-icons": "^4.7.1",
     "sass": "^1.57.1",
     "typescript": "4.9.4"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }

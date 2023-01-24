@@ -1,14 +1,14 @@
-import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "@next/font/google";
 import styles from "./header.module.scss";
-import Category from "../Category/Category";
 
 import { BsChevronDown } from "react-icons/bs";
 import { useState } from "react";
 import classNames from "classnames/bind";
 
-export default function Header({ data }) {
+type DataProps = { data: any };
+type TimeProps = { day: string; open: string; close: string };
+
+export default function Header(props: DataProps) {
+  const { data } = props;
   const [open, setOpen] = useState<boolean>();
 
   const cx = classNames.bind(styles);
@@ -40,7 +40,7 @@ export default function Header({ data }) {
               <h3>Öppettider</h3>
               <h4>Butiken</h4>
               <div className={styles.openHours}>
-                {data.store.openHours.map((time) => {
+                {data.store.openHours.map((time: TimeProps) => {
                   return (
                     <div key={time.day}>
                       <span>{time.day}</span>

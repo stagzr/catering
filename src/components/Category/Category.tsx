@@ -4,7 +4,10 @@ import styles from "./style.module.scss";
 import json from "../../../assignment/data.json";
 import { HiArrowRight } from "react-icons/hi";
 
-export default function Category({ data }) {
+type DataProps = { data: any };
+
+export default function Category(props: DataProps) {
+  const { data } = props;
   return (
     <div key={data.name} className={styles.container}>
       <div className={styles.imageContainer}>
