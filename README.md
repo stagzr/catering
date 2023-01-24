@@ -8,7 +8,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Run it
 
-First, run the development server:
+First, run the development server (use node 18.x):
 
 ```bash
 npm run dev
