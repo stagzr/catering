@@ -30,12 +30,29 @@
   }
 
   .extraInfo {
-    background-color: red;
+    position: absolute;
+    z-index: 2;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+    background-color: #fff;
+    padding: 1rem;
+
     &.closed {
       display: none;
     }
     &.open {
       display: block;
+    }
+
+    .openHours {
+      .time {
+        min-width: 30vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        &span {
+          white-space: nowrap;
+        }
+      }
     }
   }
 }

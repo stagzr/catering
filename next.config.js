@@ -14,7 +14,7 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
 
-  assetPrefix: "/catering/",
+  // assetPrefix: "/catering/", // Use during publish
 };
 
 // https://wallis.dev/blog/deploying-a-next-js-app-to-github-pages

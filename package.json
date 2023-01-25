@@ -7,7 +7,7 @@
     "build": "next build  && next export",
     "start": "next start",
     "lint": "next lint",
-    "publish": "gh-pages -d out"
+    "publish": "touch ./out/.nojekyll && gh-pages -d out -t true"
   },
   "dependencies": {
     "@next/font": "^13.1.2",

@@ -19,6 +19,8 @@ export default function Header(props: DataProps) {
     open: open,
   });
 
+  const openHours = createOpeningHours(data.store.openHours);
+
   return (
     <>
       <div className={styles.navContainer}>
@@ -40,9 +42,9 @@ export default function Header(props: DataProps) {
               <h3>Öppettider</h3>
               <h4>Butiken</h4>
               <div className={styles.openHours}>
-                {data.store.openHours.map((time: TimeProps) => {
+                {openHours.map((time: TimeProps) => {
                   return (
-                    <div key={time.day}>
+                    <div key={time.day} className={styles.time}>
                       <span>{time.day}</span>
                       <span>
                         {time.open}-{time.close}
@@ -69,4 +71,23 @@ const LoginButton = ({ children }) => {
 
 const CartButton = ({ children }) => {
   return <button className={styles.cartButton}>{children}</button>;
+};
+
+// This is a perfect code to test :-)
+// TODO Let code handle differences between days!
+export const createOpeningHours = (timeData: Array<any>) => {
+  if (timeData.length !== 7) {
+    // Do warning
+    return [];
+  }
+
+  return [
+    {
+      day: "Måndag - fredag",
+      open: timeData[0].open,
+      close: timeData[0].close,
+    },
+    { day: "Lördag", open: timeData[5].open, close: timeData[5].close },
+    { day: "Söndag", open: timeData[6].open, close: timeData[6].close },
+  ];
 };
